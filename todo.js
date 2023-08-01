@@ -12,5 +12,10 @@ function addTask() {
     taskInput.value = "";
 
     
+    // Save task to local storage
     saveTaskToLocalStorage(taskList.innerHTML);
+}
+
+function saveTaskToLocalStorage(tasks) {
+    localStorage.setItem("tasks", tasks);
 }
